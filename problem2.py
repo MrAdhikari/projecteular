@@ -17,7 +17,8 @@ def fibonacci_direct(n):
 temp = 0
 sum = 0
 for i in range(25,35):
-    while(fibonacci_direct(i) <= 4000000):
+    if (fibonacci_direct(i) <= 4000000):
+        print(f"checking {i}")
         temp =i
 
 while(temp > 25):
