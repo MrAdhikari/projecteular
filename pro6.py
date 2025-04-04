@@ -13,5 +13,6 @@ while(pos != 10001):
     if is_prime(i):
         pos += 1
     i+=1
+    
 print(f"10001st prime is {i}")
     
