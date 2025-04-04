@@ -3,6 +3,7 @@
 import math
 
 def fibonacci_direct(n):
+    n = n+1
     if n <= 0:
         return "Input should be a positive integer."
     # Golden ratio
@@ -14,19 +15,18 @@ def fibonacci_direct(n):
     return round(fib_n)  # Round the result to get an integer
 
 
-temp = 0
+temp = 32
 sum = 0
-for i in range(25,35):
-    if (fibonacci_direct(i) <= 4000000):
-        print(f"checking {i}")
-        temp =i
 
-while(temp > 25):
-    if (temp - 2) % 3 == 0:
-        break
-    temp -= 1
+# for i in range(1, temp+1):
+#     sum = sum + fibonacci_direct(2+(3*(i-1)))
+
+# print(f'the sum is {sum}')
 
 for i in range(1, temp+1):
-    sum = sum + fibonacci_direct(i)
+    if (i-2) % 3 == 0:
+        # print(f"i is {i}")
+        # print(fibonacci_direct(i))
+        sum += fibonacci_direct(i)
 
-print(f'the sum is {sum}')
+print(sum)
