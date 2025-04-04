@@ -8,11 +8,10 @@ def is_prime(n):
     return (temp==2)
 
 i=1
-temp = 0
-while(temp != 10001):
-    while(1):
-        if is_prime(i):
-            temp += 1
-        i+=1
+pos = 0
+while(pos != 10001):
+    if is_prime(i):
+        pos += 1
+    i+=1
 print(f"10001st prime is {i}")
     
