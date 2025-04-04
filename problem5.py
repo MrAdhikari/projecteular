@@ -1,22 +1,15 @@
-#problem 5
+#problem5
 
-list1 = []
-gcd = 1
-product = 1
-
-for i in range(1,21):
-    list1.append(i)
-
-def gcd_calculator(a,b):
-    while(a != b):
-        if b < a:
-            a = a-b
-        else:
-            b = b-a
+def gcd_calculator(a, b):
+    while b != 0:
+        a, b = b, a % b
     return a
 
-for i in range(21):
-    gcd = gcd_calculator(gcd, i)
-    product = product*i
-    
-print(f"The lcm is {product/gcd}")
+def lcm(a, b):
+    return (a * b) // gcd_calculator(a, b)
+
+lcm_result = 1
+for i in range(1, 21):
+    lcm_result = lcm(lcm_result, i)
+
+print(f"The LCM of numbers from 1 to 20 is {lcm_result}")
