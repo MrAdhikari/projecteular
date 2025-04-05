@@ -15,3 +15,4 @@ for i in range(2, int(limit**0.5) + 1):
 # Sum up the primes below the limit.
 prime_sum = (i for i, prime in enumerate(is_prime) if prime)
 print(sum(prime_sum))
+print("DOne")
