@@ -1,9 +1,16 @@
-#p15
+# #p15
 
-def square_path(n):
-    if n == 1:
-        return 2
-    else:
-        return 2*square_path(n-1) + 2*(n-1)
-    
-print(square_path(20))
+# n = 20
+
+# binary_list = (bin(i) for i in range(4**n +1) if (bin(i).count('1') == n) )
+
+# print(sum(1 for _ in binary_list))
+
+# # for x in binary_list:
+# #     print(x)
+
+import math
+
+n = 20
+result = math.comb(2 * n, n)
+print(result)
